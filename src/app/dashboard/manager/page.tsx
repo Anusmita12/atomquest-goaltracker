@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import { DashboardLayout } from '@/components/layout/DashboardLayout';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -14,7 +15,10 @@ import {
   TableRow,
 } from '@/components/ui/table';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
 import { AlertTriangle, CheckCircle, Clock, Users, ArrowUpRight, ArrowDownRight, Check, X, Search } from 'lucide-react';
+import { ResponsiveContainer, LineChart, CartesianGrid, XAxis, YAxis, Tooltip, Line } from 'recharts';
 import { PROFILES, DEPT_TREND } from '@/lib/mock-data';
 import { useGoals } from '@/lib/GoalContext';
 

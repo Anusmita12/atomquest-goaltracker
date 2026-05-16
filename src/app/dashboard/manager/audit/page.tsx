@@ -9,9 +9,9 @@ export default function ManagerAuditPage() {
   const { activities } = useGoals();
   // Filter logs to show only team-related actions (Rahul Bose's team)
   const teamLogs = activities.filter(l => 
-    l.goal.includes('Arjun') || 
-    l.goal.includes('Neha') || 
-    l.goal.includes('Priya') ||
+    (l.goal && l.goal.includes('Arjun')) || 
+    (l.goal && l.goal.includes('Neha')) || 
+    (l.goal && l.goal.includes('Priya')) ||
     l.user === 'Rahul Bose'
   );
 

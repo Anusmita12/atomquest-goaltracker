@@ -14,7 +14,7 @@ export default function AdminAuditPage() {
   const filtered = activities.filter(l =>
     l.user.toLowerCase().includes(search.toLowerCase()) ||
     l.action.toLowerCase().includes(search.toLowerCase()) ||
-    l.goal.toLowerCase().includes(search.toLowerCase())
+    (l.goal && l.goal.toLowerCase().includes(search.toLowerCase()))
   );
 
   return (
@@ -23,7 +23,7 @@ export default function AdminAuditPage() {
         <CardHeader className="flex flex-row items-center justify-between border-b px-6 py-4">
           <div>
             <CardTitle>System Audit Trail</CardTitle>
-            <CardDescription>{AUDIT_LOGS.length} events recorded in FY 2025-26</CardDescription>
+            <CardDescription>{activities.length} events recorded in FY 2025-26</CardDescription>
           </div>
           <div className="relative">
             <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />

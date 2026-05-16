@@ -4,9 +4,11 @@ import { ReactNode } from 'react';
 import { Sidebar } from './Sidebar';
 import { TopNavbar } from './TopNavbar';
 
+import { UserRole } from '@/lib/types';
+
 interface DashboardLayoutProps {
   children: ReactNode;
-  persona: 'employee' | 'manager' | 'admin';
+  persona: UserRole;
   title: string;
 }
 

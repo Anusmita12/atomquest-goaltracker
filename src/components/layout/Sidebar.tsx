@@ -42,7 +42,9 @@ const ROLE_LABELS = {
   admin: 'Admin',
 };
 
-export function Sidebar({ persona }: { persona: 'employee' | 'manager' | 'admin' }) {
+import { UserRole } from '@/lib/types';
+
+export function Sidebar({ persona }: { persona: UserRole }) {
   const pathname = usePathname();
   const router = useRouter();
   const basePath = `/dashboard/${persona}`;
