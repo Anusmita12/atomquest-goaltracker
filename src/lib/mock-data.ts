@@ -20,6 +20,7 @@ export interface Goal {
   q2: number | string | null;
   q3: number | string | null;
   score: number;
+  isShared?: boolean;
 }
 
 export interface Employee {
