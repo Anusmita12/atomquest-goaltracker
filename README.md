@@ -141,12 +141,3 @@ npm run dev
 
 ---
 
-## 👥 Team
-
-Built with ❤️ for AtomQuest Hackathon 1.0
-
----
-
-## 📄 License
-
-MIT
