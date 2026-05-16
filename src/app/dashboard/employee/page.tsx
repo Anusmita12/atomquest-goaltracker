@@ -40,7 +40,7 @@ const STATUS_STYLES: Record<string, string> = {
 };
 
 export default function EmployeeDashboard() {
-  const { goals, activities, addGoal, submitCheckIn } = useGoals();
+  const { goals, auditLogs, addGoal, submitCheckIn } = useGoals();
   const [isAddGoalOpen, setIsAddGoalOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [toast, setToast] = useState('');
@@ -63,7 +63,8 @@ export default function EmployeeDashboard() {
 
   const EMPLOYEE_ID = 'e1';
   const EMPLOYEE_GOALS = goals.filter(g => g.employeeId === EMPLOYEE_ID);
-  const EMPLOYEE_ACTIVITIES = activities.filter(a => a.user === 'Priya Sharma');
+  const employeeGoalTitles = EMPLOYEE_GOALS.map(g => g.title);
+  const EMPLOYEE_ACTIVITIES = auditLogs.filter(a => a.user === 'Employee' || a.user === 'Priya Sharma' || (a.goal && employeeGoalTitles.includes(a.goal)));
 
   const filteredGoals = EMPLOYEE_GOALS.filter(g =>
     g.title.toLowerCase().includes(searchQuery.toLowerCase()) ||

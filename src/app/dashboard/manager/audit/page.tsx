@@ -6,9 +6,9 @@ import { Badge } from '@/components/ui/badge';
 import { useGoals } from '@/lib/GoalContext';
 
 export default function ManagerAuditPage() {
-  const { activities } = useGoals();
+  const { auditLogs } = useGoals();
   // Filter logs to show only team-related actions (Rahul Bose's team)
-  const teamLogs = activities.filter(l => 
+  const teamLogs = auditLogs.filter(l => 
     (l.goal && l.goal.includes('Arjun')) || 
     (l.goal && l.goal.includes('Neha')) || 
     (l.goal && l.goal.includes('Priya')) ||
