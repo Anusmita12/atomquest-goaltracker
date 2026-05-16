@@ -2,6 +2,12 @@ import { NextResponse } from 'next/server';
 import sql from '@/lib/db';
 
 export async function GET() {
+  if (!process.env.DATABASE_URL) {
+    return NextResponse.json({ 
+      success: false, 
+      message: 'DATABASE_URL is not defined. Please add it to your environment variables.' 
+    }, { status: 500 });
+  }
   try {
     // Attempt to fetch the count of profiles we seeded earlier
     const result = await sql`SELECT COUNT(*) FROM profiles`;

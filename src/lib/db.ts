@@ -1,11 +1,11 @@
 import { neon } from '@neondatabase/serverless';
 
-if (!process.env.DATABASE_URL) {
+if (!process.env.DATABASE_URL && process.env.NODE_ENV === 'production' && !process.env.VERCEL) {
   throw new Error('DATABASE_URL is not defined in environment variables');
 }
 
-// Standard SQL client for server actions and API routes
-const sql = neon(process.env.DATABASE_URL);
+const dbUrl = process.env.DATABASE_URL || '';
+const sql = neon(dbUrl);
 
 /**
  * Executes a query with an RLS session context.
