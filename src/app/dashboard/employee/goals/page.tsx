@@ -12,7 +12,7 @@ import { useGoals } from '@/lib/GoalContext';
 
 export default function EmployeeGoalsPage() {
   const { goals } = useGoals();
-  const employeeGoals = goals.filter(g => g.user === 'employee@demo.com');
+  const employeeGoals = goals.filter(g => g.employeeId === 'e1');
   const totalWeight = employeeGoals.reduce((s, g) => s + g.weightage, 0);
   const approved = employeeGoals.filter(g => g.status === 'Approved').length;
 

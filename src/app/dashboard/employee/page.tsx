@@ -294,7 +294,7 @@ export default function EmployeeDashboard() {
               <div className="space-y-2">
                 <Label>Select Goal</Label>
                 <Select onValueChange={(v) => {
-                  setSelectedGoalId(v);
+                  setSelectedGoalId(v as string);
                   const g = EMPLOYEE_GOALS.find(x => x.id === v);
                   if (g) setCheckInValue(Number(g.q3) || 0);
                 }}>

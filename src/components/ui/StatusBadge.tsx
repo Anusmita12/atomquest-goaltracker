@@ -1,6 +1,6 @@
-import { GoalStatus } from "@/lib/types";
+import { GoalStatus } from "@/lib/mock-data";
 
-const statusColor: Record<GoalStatus, string> = {
+const statusColor: Partial<Record<GoalStatus, string>> = {
   draft: "bg-slate-200 text-slate-800",
   submitted: "bg-amber-100 text-amber-900",
   approved: "bg-emerald-100 text-emerald-900",

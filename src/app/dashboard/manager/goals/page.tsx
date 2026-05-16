@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { DashboardLayout } from '@/components/layout/DashboardLayout';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { PROFILES, PRIYA_GOALS, ARJUN_GOALS, NEHA_GOALS, Goal } from '@/lib/mock-data';
+import { PROFILES, PRIYA_GOALS, ARJUN_GOALS, NEHA_GOALS, Goal, GoalStatus } from '@/lib/mock-data';
 import { StatusBadge, ScoreBadge } from '@/components/ui/status-badge';
 import { ChevronDown, ChevronRight } from 'lucide-react';
 

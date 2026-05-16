@@ -42,7 +42,7 @@ const ROLE_LABELS = {
   admin: 'Admin',
 };
 
-import { UserRole } from '@/lib/types';
+import { UserRole } from '@/lib/mock-data';
 
 export function Sidebar({ persona }: { persona: UserRole }) {
   const pathname = usePathname();

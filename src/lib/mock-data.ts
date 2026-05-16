@@ -1,4 +1,76 @@
-import { GoalStatus, UoMType, Goal, Employee, AuditLog, ActivityLog } from './types';
+// --- Types & Interfaces ---
+
+export type GoalStatus = 'Approved' | 'Pending' | 'Returned' | 'Completed' | 'Returned' | 'Draft' | 'Submitted' | 'Locked' | 'Rejected' | 'draft' | 'submitted' | 'approved' | 'returned' | 'locked' | 'rejected' | 'pending';
+export type UserRole = 'employee' | 'manager' | 'admin';
+export type UoMType = 'min' | 'max' | 'timeline' | 'zero';
+
+export interface Goal {
+  id: string;
+  employeeId: string;
+  thrustArea: string;
+  description?: string;
+  title: string;
+  uom: UoMType;
+  unit: string;
+  targetValue: number | string;
+  weightage: number;
+  status: GoalStatus;
+  deadline?: string;
+  q1: number | string | null;
+  q2: number | string | null;
+  q3: number | string | null;
+  score: number;
+}
+
+export interface Employee {
+  id: string;
+  name: string;
+  email: string;
+  department: string;
+  managerId: string | null;
+  role: 'employee' | 'manager' | 'admin';
+  overallScore: number;
+  lastActivity: string;
+}
+
+// Aliasing Employee to User as requested
+export type User = Employee;
+
+export interface CheckIn {
+  goalId: string;
+  value: number;
+  note: string;
+  timestamp: string;
+}
+
+export interface Comment {
+  id: string;
+  authorId: string;
+  text: string;
+  timestamp: string;
+}
+
+export interface AuditLog {
+  id: string;
+  timestamp: string;
+  user: string;
+  action: string;
+  goal: string;
+  oldValue: string;
+  newValue: string;
+}
+
+export interface ActivityLog {
+  id: string;
+  timestamp: string;
+  user: string;
+  action: string;
+  goal?: string;
+  oldValue?: string;
+  newValue?: string;
+}
+
+// --- Mock Data ---
 
 export const PROFILES: Employee[] = [
   { id: 'e1', name: 'Priya Sharma', email: 'employee@demo.com', department: 'Engineering', managerId: 'm1', role: 'employee', overallScore: 86, lastActivity: '12 May 2026' },

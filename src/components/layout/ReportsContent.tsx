@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/com
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { ALL_GOALS, PROFILES, GoalStatus } from '@/lib/mock-data';
+import { ALL_GOALS, PROFILES, GoalStatus, Goal } from '@/lib/mock-data';
 import { StatusBadge, ScoreBadge } from '@/components/ui/status-badge';
 import { Download } from 'lucide-react';
 import Papa from 'papaparse';

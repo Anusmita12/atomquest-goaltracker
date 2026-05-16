@@ -4,7 +4,7 @@ import { ReactNode } from 'react';
 import { Sidebar } from './Sidebar';
 import { TopNavbar } from './TopNavbar';
 
-import { UserRole } from '@/lib/types';
+import { UserRole } from '@/lib/mock-data';
 
 interface DashboardLayoutProps {
   children: ReactNode;

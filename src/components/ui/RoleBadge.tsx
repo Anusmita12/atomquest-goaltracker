@@ -1,4 +1,4 @@
-import { UserRole } from "@/lib/types";
+import { UserRole } from "@/lib/mock-data";
 
 const roleColor: Record<UserRole, string> = {
   employee: "bg-blue-100 text-blue-900",
