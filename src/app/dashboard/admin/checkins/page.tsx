@@ -20,20 +20,20 @@ export default function AdminCheckinsPage() {
         <Card className="shadow-sm border-muted">
           <CardContent className="pt-6">
             <p className="text-sm text-muted-foreground">Q3 Check-in Completion</p>
-            <p className="text-2xl font-bold mt-1">{q3CompletionRate}%</p>
+            <p className="text-[28px] font-[700] mt-1">{q3CompletionRate}%</p>
             <Progress value={q3CompletionRate} className="h-2 mt-2" />
           </CardContent>
         </Card>
         <Card className="shadow-sm border-muted">
           <CardContent className="pt-6">
             <p className="text-sm text-muted-foreground">Submitted</p>
-            <p className="text-2xl font-bold text-emerald-600 mt-1">{CHECKIN_DATA.filter(d => d.q3Done).length} / {CHECKIN_DATA.length}</p>
+            <p className="text-[28px] font-[700] text-emerald-600 mt-1">{CHECKIN_DATA.filter(d => d.q3Done).length} / {CHECKIN_DATA.length}</p>
           </CardContent>
         </Card>
         <Card className="shadow-sm border-muted">
           <CardContent className="pt-6">
             <p className="text-sm text-muted-foreground">Missing Q3</p>
-            <p className="text-2xl font-bold text-red-600 mt-1">{CHECKIN_DATA.filter(d => !d.q3Done).length} employee(s)</p>
+            <p className="text-[28px] font-[700] text-red-600 mt-1">{CHECKIN_DATA.filter(d => !d.q3Done).length} employee(s)</p>
           </CardContent>
         </Card>
       </div>

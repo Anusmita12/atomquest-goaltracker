@@ -4,15 +4,17 @@ import { GoalStatus } from '@/lib/mock-data';
 export function StatusBadge({ status }: { status: GoalStatus }) {
   switch (status) {
     case 'Approved':
-      return <Badge className="bg-emerald-500/10 text-emerald-600 border-emerald-500/20 hover:bg-emerald-500/20">Approved</Badge>;
+      return <Badge className="bg-[#DCFCE7] text-[#15803D] border-0 hover:bg-[#DCFCE7]/80">Approved</Badge>;
     case 'Pending':
-      return <Badge className="bg-amber-500/10 text-amber-600 border-amber-500/20 hover:bg-amber-500/20">Pending</Badge>;
+      return <Badge className="bg-[#FEF9C3] text-[#854D0E] border-0 hover:bg-[#FEF9C3]/80">Pending</Badge>;
     case 'Returned':
-      return <Badge className="bg-red-500/10 text-red-600 border-red-500/20 hover:bg-red-500/20">Returned</Badge>;
+      return <Badge className="bg-[#FEE2E2] text-[#B91C1C] border-0 hover:bg-[#FEE2E2]/80">Returned</Badge>;
     case 'Completed':
-      return <Badge className="bg-blue-500/10 text-blue-600 border-blue-500/20 hover:bg-blue-500/20">Completed</Badge>;
+      return <Badge className="bg-[#DBEAFE] text-[#1D4ED8] border-0 hover:bg-[#DBEAFE]/80">Completed</Badge>;
+    case 'Draft':
+      return <Badge className="bg-[#F3F4F6] text-[#374151] border-0 hover:bg-[#F3F4F6]/80">Draft</Badge>;
     default:
-      return <Badge>{status}</Badge>;
+      return <Badge className="border-0">{status}</Badge>;
   }
 }
 

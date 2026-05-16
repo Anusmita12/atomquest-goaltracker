@@ -123,7 +123,7 @@ export default function EmployeeDashboard() {
             <Target className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{totalGoals}</div>
+            <div className="text-[28px] font-[700]">{totalGoals}</div>
             <p className="text-xs text-muted-foreground mt-1">Maximum 8 allowed</p>
           </CardContent>
         </Card>
@@ -133,7 +133,7 @@ export default function EmployeeDashboard() {
             <CheckCircle2 className="h-4 w-4 text-emerald-500" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{approvedGoals}</div>
+            <div className="text-[28px] font-[700]">{approvedGoals}</div>
             <p className="text-xs text-muted-foreground mt-1">Ready for execution</p>
           </CardContent>
         </Card>
@@ -143,7 +143,7 @@ export default function EmployeeDashboard() {
             <AlertCircle className="h-4 w-4 text-amber-500" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{pendingGoals}</div>
+            <div className="text-[28px] font-[700]">{pendingGoals}</div>
             <p className="text-xs text-muted-foreground mt-1">Awaiting manager action</p>
           </CardContent>
         </Card>
@@ -156,7 +156,7 @@ export default function EmployeeDashboard() {
             <Clock className="h-4 w-4 text-blue-500" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{overallProgress}%</div>
+            <div className="text-[28px] font-[700]">{overallProgress}%</div>
             <p className="text-xs text-muted-foreground mt-1">Q3 2026 Target</p>
           </CardContent>
         </Card>

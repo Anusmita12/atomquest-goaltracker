@@ -147,7 +147,7 @@ export default function EmployeeGoalsPage() {
           <Card key={c.label} className="shadow-sm border-muted">
             <CardContent className="pt-6">
               <p className="text-sm text-muted-foreground">{c.label}</p>
-              <p className="text-2xl font-bold mt-1">{c.value}</p>
+              <p className="text-[28px] font-[700] mt-1">{c.value}</p>
             </CardContent>
           </Card>
         ))}

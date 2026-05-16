@@ -79,7 +79,7 @@ export function Sidebar({ persona }: { persona: UserRole }) {
     .toUpperCase() ?? persona[0].toUpperCase();
 
   return (
-    <div className="flex h-screen w-64 flex-col border-r bg-card text-card-foreground shadow-sm">
+    <div className="flex h-screen w-[220px] flex-col border-r border-[#E5E5E5] bg-white text-card-foreground shadow-sm">
       <div className="flex h-16 items-center px-6 border-b">
         <Target className="h-6 w-6 text-primary mr-2" />
         <span className="text-lg font-bold tracking-tight">GoalTracker</span>
@@ -96,10 +96,10 @@ export function Sidebar({ persona }: { persona: UserRole }) {
                 key={item.name}
                 href={href}
                 className={cn(
-                  'flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors',
+                  'flex items-center px-3 py-2 text-sm font-medium transition-colors',
                   isActive
-                    ? 'bg-primary/10 text-primary'
-                    : 'text-muted-foreground hover:bg-muted hover:text-foreground'
+                    ? 'bg-[#F3F3F3] text-black border-l-[3px] border-black rounded-none'
+                    : 'text-muted-foreground hover:bg-muted hover:text-foreground rounded-md'
                 )}
               >
                 <Icon className={cn('mr-3 h-5 w-5', isActive ? 'text-primary' : 'text-muted-foreground')} />

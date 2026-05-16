@@ -91,7 +91,7 @@ export default function AdminDashboard() {
             <div className="flex justify-between items-start pb-2">
               <div>
                 <p className="text-sm font-medium text-muted-foreground">Total Employees</p>
-                <p className="text-2xl font-bold">{EMPLOYEES.length}</p>
+                <p className="text-[28px] font-[700]">{EMPLOYEES.length}</p>
               </div>
               <div className="p-2 bg-primary/10 rounded-md"><Users className="h-4 w-4 text-primary" /></div>
             </div>
@@ -104,7 +104,7 @@ export default function AdminDashboard() {
             <div className="flex justify-between items-start pb-2">
               <div>
                 <p className="text-sm font-medium text-muted-foreground">Goals Submitted</p>
-                <p className="text-2xl font-bold">{totalGoals}</p>
+                <p className="text-[28px] font-[700]">{totalGoals}</p>
               </div>
               <div className="p-2 bg-blue-500/10 rounded-md"><Activity className="h-4 w-4 text-blue-500" /></div>
             </div>
@@ -117,7 +117,7 @@ export default function AdminDashboard() {
             <div className="flex justify-between items-start pb-2">
               <div>
                 <p className="text-sm font-medium text-muted-foreground">Approved</p>
-                <p className="text-2xl font-bold">{Math.round((approvedGoals / totalGoals) * 100)}%</p>
+                <p className="text-[28px] font-[700]">{Math.round((approvedGoals / totalGoals) * 100)}%</p>
               </div>
               <div className="p-2 bg-emerald-500/10 rounded-md"><Target className="h-4 w-4 text-emerald-500" /></div>
             </div>
@@ -130,7 +130,7 @@ export default function AdminDashboard() {
             <div className="flex justify-between items-start pb-2">
               <div>
                 <p className="text-sm font-medium text-muted-foreground">Q3 Check-ins</p>
-                <p className="text-2xl font-bold">{Math.round((q3Submitted / totalGoals) * 100)}%</p>
+                <p className="text-[28px] font-[700]">{Math.round((q3Submitted / totalGoals) * 100)}%</p>
               </div>
               <div className="p-2 bg-amber-500/10 rounded-md"><Lock className="h-4 w-4 text-amber-500" /></div>
             </div>

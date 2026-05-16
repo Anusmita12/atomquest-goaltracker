@@ -124,7 +124,7 @@ export default function ManagerDashboard() {
             <Clock className="h-4 w-4 text-amber-500" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{approvalQueue.length}</div>
+            <div className="text-[28px] font-[700]">{approvalQueue.length}</div>
             <p className="text-xs flex items-center text-amber-600 mt-1 font-medium">
               <AlertTriangle className="mr-1 h-3 w-3" />
               {approvalQueue.length > 0 ? 'Requires immediate action' : 'All caught up'}
@@ -138,7 +138,7 @@ export default function ManagerDashboard() {
             <Users className="h-4 w-4 text-primary" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">3</div>
+            <div className="text-[28px] font-[700]">3</div>
             <p className="text-xs text-muted-foreground mt-1">Direct reports</p>
           </CardContent>
         </Card>
@@ -149,7 +149,7 @@ export default function ManagerDashboard() {
             <AlertTriangle className="h-4 w-4 text-blue-500" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{avgScore}%</div>
+            <div className="text-[28px] font-[700]">{avgScore}%</div>
             <p className="text-xs text-muted-foreground mt-1">Across approved goals</p>
           </CardContent>
         </Card>
@@ -160,7 +160,7 @@ export default function ManagerDashboard() {
             <AlertTriangle className="h-4 w-4 text-red-500" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{teamGoals.length}</div>
+            <div className="text-[28px] font-[700]">{teamGoals.length}</div>
             <p className="text-xs text-muted-foreground mt-1">Across all employees</p>
           </CardContent>
         </Card>
