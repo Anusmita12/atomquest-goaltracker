@@ -1,13 +1,12 @@
-# GoalTracker — Goal Setting & Tracking Portal
-> Built for AtomQuest Hackathon 1.0
+# AtomQuest - Goal Setting & Tracking Portal
 
-GoalTracker is an internal goal setting and performance tracking portal. It enables employees to set annual goals, managers to review and approve them, and HR admins to monitor company-wide progress — all in one place.
+Built for AtomQuest Hackathon 1.0.
 
----
+AtomQuest is Atomberg's internal goal setting and performance tracking portal. It enables employees to set annual goals, managers to review and approve them, and HR admins to monitor company-wide progress all in one place.
 
-## 🚀 Live Demo
+## Live Demo
 
-🔗 **[your-deployment-url.vercel.app](https://your-deployment-url.vercel.app)**
+**[atomquest-goal-portal-three.vercel.app](https://atomquest-goal-portal-three.vercel.app)**
 
 ### Demo Login Credentials
 
@@ -17,11 +16,9 @@ GoalTracker is an internal goal setting and performance tracking portal. It enab
 | Manager | manager@demo.com | Demo@1234 |
 | Admin | admin@demo.com | Demo@1234 |
 
-> Use the **Quick Demo Access** buttons on the login page for one-click role switching.
+Note: You can use the Quick Demo Access buttons on the login page for one-click role switching.
 
----
-
-## 📋 What It Does
+## What It Does
 
 ### For Employees
 - Create and manage annual goals across 5 thrust areas (Revenue, Cost, Quality, People, Innovation)
@@ -45,23 +42,19 @@ GoalTracker is an internal goal setting and performance tracking portal. It enab
 - Export achievement reports as CSV
 - Full audit log of all changes
 
----
+## Features
 
-## ✨ Features
+- Role-based access: Employee / Manager / Admin
+- Goal creation with full validation (weightage, limits, UoM types)
+- Manager approval workflow with inline editing
+- Shared goals pushed from manager to team
+- Quarterly check-ins with progress score computation
+- Real-time completion dashboard
+- CSV export of achievement reports
+- Full audit trail
+- Analytics: QoQ trends, thrust area distribution, manager effectiveness
 
-- ✅ Role-based access: Employee / Manager / Admin
-- ✅ Goal creation with full validation (weightage, limits, UoM types)
-- ✅ Manager approval workflow with inline editing
-- ✅ Shared goals pushed from manager to team
-- ✅ Quarterly check-ins with progress score computation
-- ✅ Real-time completion dashboard
-- ✅ CSV export of achievement reports
-- ✅ Full audit trail
-- ✅ Analytics: QoQ trends, thrust area distribution, manager effectiveness
-
----
-
-## 📊 Progress Score Formulas
+## Progress Score Formulas
 
 | UoM Type | Formula | Example |
 |----------|---------|---------|
@@ -70,11 +63,9 @@ GoalTracker is an internal goal setting and performance tracking portal. It enab
 | **Timeline** | `completed before date = 100%, else 0%` | Project launch |
 | **Zero** | `actual === 0 → 100%, else 0%` | Zero incidents |
 
-Overall score = weighted average across all goals.
+Overall score is the weighted average across all goals.
 
----
-
-## 🗂️ Goal Setting Cycle
+## Goal Setting Cycle
 
 | Phase | Window |
 |-------|--------|
@@ -82,62 +73,36 @@ Overall score = weighted average across all goals.
 | Q1 Check-in | July |
 | Q2 Check-in | October |
 | Q3 Check-in | January |
-| Q4 / Annual Review | March – April |
+| Q4 / Annual Review | March - April |
 
----
-
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Layer | Technology |
 |-------|-----------|
 | Framework | Next.js (App Router, TypeScript) |
 | Styling | Tailwind CSS + shadcn/ui |
 | Database | Neon / PostgreSQL |
-| State Management | React Context + LocalStorage Persistence |
+| State Management | React Context |
 | Charts | Recharts |
 | Deployment | Vercel |
 
----
-
-## 🏗️ Architecture
-
-```
-┌─────────────────────────────────────────┐
-│           Browser Clients               │
-│   Employee │ Manager │ Admin/HR         │
-└──────────────────┬──────────────────────┘
-                   │
-┌──────────────────▼──────────────────────┐
-│         Next.js (Vercel)                │
-│  React UI │ API Routes │ Goal Context   │
-│     Role-based Layouts                  │
-└──────┬──────────────────────────┬───────┘
-       │                          │
-┌──────▼──────┐          ┌────────▼───────┐
-│  Neon DB    │          │  LocalStorage  │
-│  Postgres   │          │  Persistence   │
-│  (SQL)      │          │  (Demo Mode)   │
-└─────────────┘          └────────────────┘
-```
-
----
-
-## ⚙️ Local Setup
+## Local Setup
 
 ```bash
 # 1. Clone the repo
-git clone <your-repo-url>
-cd atomquest
+git clone https://github.com/Anusmita12/atomquest-goal-portal.git
+cd atomquest-goal-portal
 
 # 2. Install dependencies
 npm install
 
 # 3. Set up environment variables
-# Add your DATABASE_URL to .env.local
+# Create a file named .env.local in the root folder and add your Neon database URL:
+# DATABASE_URL="postgres://your_username:your_password@your_neon_host.neon.tech/neondb?sslmode=require"
 
-# 4. Run the development server
+# 4. Create tables and seed the database with mock data
+npm run seed
+
+# 5. Run the development server
 npm run dev
 ```
-
----
-
