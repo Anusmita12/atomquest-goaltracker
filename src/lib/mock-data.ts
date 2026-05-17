@@ -98,7 +98,7 @@ export const ARJUN_GOALS: Goal[] = [
 
 export const NEHA_GOALS: Goal[] = [
   { id: 'n1', employeeId: 'e3', thrustArea: 'Cost', title: 'Reduce logistics cost by 15%', uom: 'min', unit: '%', targetValue: 15, weightage: 30, status: 'Approved', q1: 4, q2: 8, q3: 11, score: 73 },
-  { id: 'n2', employeeId: 'e3', thrustArea: 'Quality', title: 'Achieve 99% SLA compliance', uom: 'min', unit: '%', targetValue: 99, weightage: 25, status: 'Returned', q1: 94, q2: 96, q3: 97, score: 98 },
+  { id: 'n2', employeeId: 'e3', thrustArea: 'Quality', title: 'Achieve 99% SLA compliance', uom: 'min', unit: '%', targetValue: 99, weightage: 25, status: 'Pending', q1: 94, q2: 96, q3: 97, score: 98 },
   { id: 'n3', employeeId: 'e3', thrustArea: 'Innovation', title: 'Automate 3 manual processes', uom: 'min', unit: 'processes', targetValue: 3, weightage: 25, status: 'Approved', q1: 1, q2: 2, q3: 2, score: 67 },
   { id: 'n4', employeeId: 'e3', thrustArea: 'People', title: 'Complete Six Sigma certification', uom: 'timeline', unit: 'date', targetValue: '31 Mar 2026', weightage: 20, status: 'Approved', deadline: '31 Mar 2026', q1: null, q2: null, q3: null, score: 0 },
 ];
