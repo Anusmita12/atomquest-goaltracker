@@ -79,7 +79,7 @@ Overall score is the weighted average across all goals.
 
 | Layer | Technology |
 |-------|-----------|
-| Framework | Next.js (App Router, TypeScript) |
+| Framework | Next.js (React , TypeScript) |
 | Styling | Tailwind CSS + shadcn/ui |
 | Database | Neon / PostgreSQL |
 | State Management | React Context |
