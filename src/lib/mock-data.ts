@@ -93,7 +93,7 @@ export const ARJUN_GOALS: Goal[] = [
   { id: 'a1', employeeId: 'e2', thrustArea: 'Revenue', title: 'Close 15 enterprise deals', uom: 'min', unit: 'deals', targetValue: 15, weightage: 30, status: 'Approved', q1: 4, q2: 9, q3: 13, score: 87 },
   { id: 'a2', employeeId: 'e2', thrustArea: 'Cost', title: 'Reduce sales cycle to 30 days', uom: 'max', unit: 'days', targetValue: 30, weightage: 25, status: 'Approved', q1: 45, q2: 38, q3: 31, score: 97 },
   { id: 'a3', employeeId: 'e2', thrustArea: 'Quality', title: 'Achieve CSAT score above 4.5', uom: 'min', unit: 'score', targetValue: 4.5, weightage: 25, status: 'Approved', q1: 4.1, q2: 4.4, q3: 4.6, score: 100 },
-  { id: 'a4', employeeId: 'e2', thrustArea: 'People', title: 'Onboard 2 new sales reps', uom: 'timeline', unit: 'date', targetValue: '30 Jun 2025', weightage: 20, status: 'Approved', deadline: '30 Jun 2025', q1: null, q2: 'Completed 25 Jun 2025', q3: null, score: 100 },
+  { id: 'a4', employeeId: 'e2', thrustArea: 'People', title: 'Onboard 2 new sales reps', uom: 'timeline', unit: 'date', targetValue: '30 Jun 2025', weightage: 20, status: 'Pending', deadline: '30 Jun 2025', q1: null, q2: 'Completed 25 Jun 2025', q3: null, score: 100 },
 ];
 
 export const NEHA_GOALS: Goal[] = [
