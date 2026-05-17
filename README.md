@@ -1,8 +1,8 @@
-# AtomQuest - Goal Setting & Tracking Portal
+# GoalTracker - Goal Setting & Tracking Portal
 
 Built for AtomQuest Hackathon 1.0.
 
-AtomQuest is Atomberg's internal goal setting and performance tracking portal. It enables employees to set annual goals, managers to review and approve them, and HR admins to monitor company-wide progress all in one place.
+GoalTracker is an internal goal setting and performance tracking portal. It enables employees to set annual goals, managers to review and approve them, and HR admins to monitor company-wide progress all in one place.
 
 ## Live Demo
 
