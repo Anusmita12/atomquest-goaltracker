@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 export const metadata: Metadata = {
-  title: "AuraGoal // Enterprise Performance Management",
+  title: "GoalTracker",
   description: "Corporate Goal Setting & Tracking Portal",
 };
 
